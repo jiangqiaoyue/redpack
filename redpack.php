@@ -44,7 +44,7 @@ private function sendredpack($openid){
     $client_ip = "";                                                      //调用微信红包接口的Ip地址，公号后台设置
     $act_name = "关注有礼";                                               //活动名称
     $remark = "测试";                                                     //备注
-    $apikey = "";                                                // key 商户后台设置的  微信商户平台(pay.weixin.qq.com)-->账户设置-->API安全-->密钥设置
+    $apikey = "";                                  // key 商户后台设置的  微信商户平台(pay.weixin.qq.com)-->账户设置-->API安全-->密钥设置
     $nonce_str =  md5(rand());                                            //随机字符串，不长于32位
     $m_arr = array (
             'mch_billno' => $mch_billno,
