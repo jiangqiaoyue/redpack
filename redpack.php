@@ -1,7 +1,7 @@
 <?php
 //提交信息抽红包
-public function redpack(){
-	
+public function redpack()
+{	
 	//用户openid,至于怎么获取用户opendid,则不在本文讨论范围
 	$openid = 'oOeQMuMH7ZFyauOxuTXc0qwKRONU';
 
@@ -27,12 +27,12 @@ public function redpack(){
 }
 
 //发放现金红包
-private function sendredpack($openid){
-   	
-   	//微信商户现金红包接口url
+private function sendredpack($openid)
+{
+    //微信商户现金红包接口url
     $url = "https://api.mch.weixin.qq.com/mmpaymkttransfers/sendredpack";
    
-   	//准备你的红包参数
+    //准备你的红包参数
     $mch_billno = '填写你的商户号'.date("YmdHis",time()).rand(1000,9999); //商户订单号
     $mch_id = '填写你的商户号';                                           //微信支付分配的商户号
     $wxappid = '你的公号appid';                                           //公众账号appid
