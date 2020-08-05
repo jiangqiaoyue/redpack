@@ -16,7 +16,7 @@ public function redpack()
 	
 	//你可以把返回的结果打印出来看一下
 	// echo '<pre>';
-	// print_r($res);
+	// print_r($result);
 
 	//处理业务逻辑,注意返回结果中的result_code才是红包发放状态
 	if ($result['result_code'] == 'SUCCESS') {
@@ -33,7 +33,7 @@ private function sendredpack($openid)
     $url = "https://api.mch.weixin.qq.com/mmpaymkttransfers/sendredpack";
    
     //准备你的红包参数
-    $mch_billno = '填写你的商户号'.date("YmdHis",time()).rand(1000,9999); //商户订单号
+    $mch_billno = '填写你的商户号'.date("YmdHis",time()).rand(10000,99999); //商户订单号
     $mch_id = '填写你的商户号';                                           //微信支付分配的商户号
     $wxappid = '你的公号appid';                                           //公众账号appid
     $send_name = "商户名称";                                              //商户名称
